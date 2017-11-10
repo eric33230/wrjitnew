@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFD3B44B-9E99-42D7-AACC-84198F11463C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreasManager.cs" />
+    <Compile Include="base_cpbh_data_mainManager.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClassesManager.cs" />
+    <Compile Include="doc_BuyerManager.cs" />
+    <Compile Include="doc_calendarManager.cs" />
+    <Compile Include="PDMaterialManager.cs" />
+    <Compile Include="HR_DepartmentManager.cs" />
+    <Compile Include="doc_holidayeditManager.cs" />
+    <Compile Include="doc_OrderManager.cs" />
+    <Compile Include="doc_OrderSizeManager.cs" />
+    <Compile Include="doc_PackListManager.cs" />
+    <Compile Include="doc_PackListScanManager.cs" />
+    <Compile Include="doc_PackListShipManager.cs" />
+    <Compile Include="doc_PackListShipScanManager.cs" />
+    <Compile Include="doc_StyleBaseManager.cs" />
+    <Compile Include="doc_StyleManager.cs" />
+    <Compile Include="doc_StyleSIzeManager.cs" />
+    <Compile Include="doc_InnerBoxManager.cs" />
+    <Compile Include="HR_EmployeeManager.cs" />
+    <Compile Include="KQ_DailyManager.cs" />
+    <Compile Include="KQ_DataManager.cs" />
+    <Compile Include="MemuManager.cs" />
+    <Compile Include="OutsideBarCodePrintManager.cs" />
+    <Compile Include="Packinglistbll.cs" />
+    <Compile Include="PdinventoryManager.cs" />
+    <Compile Include="PersonManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleManager.cs" />
+    <Compile Include="TestLinManager.cs" />
+    <Compile Include="TestLinServer.cs" />
+    <Compile Include="T_Fingerprint.cs" />
+    <Compile Include="T_SiziManager.cs" />
+    <Compile Include="T_StyleCodeInfoBLL.cs" />
+    <Compile Include="T_StyleCodeInfoManager.cs" />
+    <Compile Include="UpdateFromERPDB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ecf1d83e-7863-4251-b8d0-c5a49a45ea9f}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{7c9601aa-8331-404c-a82c-d7bae0f56135}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODEL\MODEL.csproj">
+      <Project>{5eea54dd-ec70-4c8f-bb38-8bfd26f8a374}</Project>
+      <Name>MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

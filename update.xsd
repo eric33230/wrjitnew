@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="UpdateConfig">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ServerUrl" type="xsd:string" />
+        <xsd:element name="UpdateFileList">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="LocalFile">
+                <xsd:complexType>
+                  <xsd:attribute name="path" type="xsd:string" use="required" />
+                  <xsd:attribute name="lastver" type="xsd:string" use="required" />
+                  <xsd:attribute name="size" type="xsd:unsignedInt" use="required" />
+                  <xsd:attribute name="remark" type="xsd:string" use="required" />
+                  <xsd:attribute name="needRestart" type="xsd:boolean" use="required" />
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

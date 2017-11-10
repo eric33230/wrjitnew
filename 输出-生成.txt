@@ -1,0 +1,19 @@
+﻿1>------ 已启动全部重新生成: 项目: MODEL, 配置: Debug Any CPU ------
+2>------ 已启动全部重新生成: 项目: Common, 配置: Debug Any CPU ------
+1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+1>  MODEL -> D:\程序\WRJIT\MODEL\bin\Debug\MODEL.dll
+2>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+2>  Common -> D:\程序\WRJIT\Common\bin\Debug\Common.dll
+3>------ 已启动全部重新生成: 项目: DAL, 配置: Debug Any CPU ------
+4>------ 已启动全部重新生成: 项目: WindowsFormsApplication8, 配置: Debug Any CPU ------
+4>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+4>  WindowsFormsApplication8 -> D:\程序\WindowsFormsApplication8\bin\Debug\WindowsFormsApplication8.exe
+3>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+3>  DAL -> D:\程序\WRJIT\DAL\bin\Debug\DAL.dll
+5>------ 已启动全部重新生成: 项目: BLL, 配置: Debug Any CPU ------
+5>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+5>  BLL -> D:\程序\WRJIT\BLL\bin\Debug\BLL.dll
+6>------ 已启动全部重新生成: 项目: WinForm, 配置: Debug Any CPU ------
+6>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3267: 未能在当前目标框架中解析主引用“System.Net.Http”，它是一个框架程序集。“.NETFramework,Version=v4.0”。若要解决此问题，请移除引用“System.Net.Http”，或将应用程序的目标重新指向包含“System.Net.Http”的框架版本。
+6>  WinForm -> D:\程序\WRJIT\WinForm\bin\Debug\WinForm.exe
+========== 全部重新生成: 成功 6 个，失败 0 个，跳过 0 个 ==========

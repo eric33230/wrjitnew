@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<updateFiles>
+  <file path="WinForm.exe"  url="http://192.168.98.197/AutoUpdater/AutoUpdater.zip" lastver="1.0.0.1" size="4351" needRestart="true" />
+ </updateFiles>

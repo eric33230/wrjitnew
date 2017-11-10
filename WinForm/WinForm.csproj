@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F644279-2E5A-45E5-B938-E4E95BBA894C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinForm</RootNamespace>
+    <AssemblyName>WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WinForm.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Barcode.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\lib\AForge\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\lib\AForge\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Fuzzy">
+      <HintPath>..\lib\AForge\AForge.Fuzzy.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic">
+      <HintPath>..\lib\AForge\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\lib\AForge\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats">
+      <HintPath>..\lib\AForge\AForge.Imaging.Formats.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.MachineLearning">
+      <HintPath>..\lib\AForge\AForge.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\lib\AForge\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro">
+      <HintPath>..\lib\AForge\AForge.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Lego">
+      <HintPath>..\lib\AForge\AForge.Robotics.Lego.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Surveyor">
+      <HintPath>..\lib\AForge\AForge.Robotics.Surveyor.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\lib\AForge\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\lib\AForge\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.Kinect">
+      <HintPath>..\lib\AForge\AForge.Video.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>..\lib\AForge\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.Ximea">
+      <HintPath>..\lib\AForge\AForge.Video.Ximea.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.zkemkeeper">
+      <HintPath>..\lib\Interop.zkemkeeper.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\lib\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMenu.cs" />
+    <Compile Include="BarCodeClass.cs" />
+    <Compile Include="DGFillArea.cs" />
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmArea.designer.cs">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarcodeRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBarcodeRecord.Designer.cs">
+      <DependentUpon>FrmBarcodeRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuyer.Designer.cs">
+      <DependentUpon>FrmBuyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalendar.Designer.cs">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarton.Designer.cs">
+      <DependentUpon>FrmCarton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClasses.designer.cs">
+      <DependentUpon>FrmClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFingerprintManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFingerprintManager.Designer.cs">
+      <DependentUpon>FrmFingerprintManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoliday.Designer.cs">
+      <DependentUpon>FrmHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInnerboxOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInnerboxOld.Designer.cs">
+      <DependentUpon>FrmInnerboxOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInnerBoxin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInnerBoxin.Designer.cs">
+      <DependentUpon>FrmInnerBoxin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKQDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKQDaily.Designer.cs">
+      <DependentUpon>FrmKQDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuManager.Designer.cs">
+      <DependentUpon>FrmMenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderInFromERPDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderInFromERPDB.Designer.cs">
+      <DependentUpon>frmOrderInFromERPDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOutsideBarCodePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOutsideBarCodePrint.designer.cs">
+      <DependentUpon>FrmOutsideBarCodePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPacklist.Designer.cs">
+      <DependentUpon>FrmPacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmpdinventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmpdinventory.Designer.cs">
+      <DependentUpon>Frmpdinventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPDMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPDMaterial.Designer.cs">
+      <DependentUpon>FrmPDMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerson.designer.cs">
+      <DependentUpon>FrmPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReBarcodeScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReBarcodeScan.Designer.cs">
+      <DependentUpon>FrmReBarcodeScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRoleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoleManager.designer.cs">
+      <DependentUpon>FrmRoleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanSee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanSee.Designer.cs">
+      <DependentUpon>FrmScanSee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStyle.Designer.cs">
+      <DependentUpon>FrmStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStyleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStyleBase.Designer.cs">
+      <DependentUpon>FrmStyleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStylePhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStylePhoto.Designer.cs">
+      <DependentUpon>FrmStylePhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStyleSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStyleSize.Designer.cs">
+      <DependentUpon>FrmStyleSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTestNetwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTestNetwork.Designer.cs">
+      <DependentUpon>FrmTestNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWHin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWHin.Designer.cs">
+      <DependentUpon>FrmWHin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparisonHelper.cs" />
+    <Compile Include="IGetAreas.cs" />
+    <Compile Include="FrmInnerBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInnerBox.Designer.cs">
+      <DependentUpon>FrmInnerBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsgDiv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NPOIExcelExample.cs" />
+    <Compile Include="PackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackingList.Designer.cs">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmArea.resx">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarcodeRecord.resx">
+      <DependentUpon>FrmBarcodeRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuyer.resx">
+      <DependentUpon>FrmBuyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalendar.resx">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarton.resx">
+      <DependentUpon>FrmCarton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClasses.resx">
+      <DependentUpon>FrmClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFingerprintManager.resx">
+      <DependentUpon>FrmFingerprintManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoliday.resx">
+      <DependentUpon>FrmHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInnerboxOld.resx">
+      <DependentUpon>FrmInnerboxOld.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInnerBoxin.resx">
+      <DependentUpon>FrmInnerBoxin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKQDaily.resx">
+      <DependentUpon>FrmKQDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuManager.resx">
+      <DependentUpon>FrmMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderInFromERPDB.resx">
+      <DependentUpon>frmOrderInFromERPDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOutsideBarCodePrint.resx">
+      <DependentUpon>FrmOutsideBarCodePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPacklist.resx">
+      <DependentUpon>FrmPacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmpdinventory.resx">
+      <DependentUpon>Frmpdinventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPDMaterial.resx">
+      <DependentUpon>FrmPDMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerson.resx">
+      <DependentUpon>FrmPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReBarcodeScan.resx">
+      <DependentUpon>FrmReBarcodeScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoleManager.resx">
+      <DependentUpon>FrmRoleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanSee.resx">
+      <DependentUpon>FrmScanSee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStyle.resx">
+      <DependentUpon>FrmStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStyleBase.resx">
+      <DependentUpon>FrmStyleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStylePhoto.resx">
+      <DependentUpon>FrmStylePhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStyleSize.resx">
+      <DependentUpon>FrmStyleSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInnerBox.resx">
+      <DependentUpon>FrmInnerBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTestNetwork.resx">
+      <DependentUpon>FrmTestNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWHin.resx">
+      <DependentUpon>FrmWHin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackingList.resx">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="update.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\AutoUpdater.csproj">
+      <Project>{4a635af9-90b2-4ab6-a418-eab10a712ba7}</Project>
+      <Name>AutoUpdater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{ffd3b44b-9e99-42d7-aacc-84198f11463c}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ecf1d83e-7863-4251-b8d0-c5a49a45ea9f}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{7C9601AA-8331-404C-A82C-D7BAE0F56135}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODEL\MODEL.csproj">
+      <Project>{5eea54dd-ec70-4c8f-bb38-8bfd26f8a374}</Project>
+      <Name>MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="library\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\云南.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Barcode.ico" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
