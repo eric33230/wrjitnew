@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbUserName = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbPwd = new System.Windows.Forms.Label();
             this.txtUserPassword = new System.Windows.Forms.TextBox();
             this.msgDiv = new MsgDiv();
             this.SuspendLayout();
@@ -59,14 +59,14 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label1
+            // lbUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "用户名";
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Location = new System.Drawing.Point(31, 38);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(41, 12);
+            this.lbUserName.TabIndex = 1;
+            this.lbUserName.Text = "用户名";
             // 
             // txtUserName
             // 
@@ -75,14 +75,14 @@
             this.txtUserName.Size = new System.Drawing.Size(154, 21);
             this.txtUserName.TabIndex = 0;
             // 
-            // label2
+            // lbPwd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "密码";
+            this.lbPwd.AutoSize = true;
+            this.lbPwd.Location = new System.Drawing.Point(44, 86);
+            this.lbPwd.Name = "lbPwd";
+            this.lbPwd.Size = new System.Drawing.Size(29, 12);
+            this.lbPwd.TabIndex = 1;
+            this.lbPwd.Text = "密码";
             // 
             // txtUserPassword
             // 
@@ -91,6 +91,7 @@
             this.txtUserPassword.PasswordChar = '*';
             this.txtUserPassword.Size = new System.Drawing.Size(154, 21);
             this.txtUserPassword.TabIndex = 1;
+            this.txtUserPassword.TextChanged += new System.EventHandler(this.txtUserPassword_TextChanged);
             this.txtUserPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserPassword_KeyDown);
             // 
             // msgDiv
@@ -116,9 +117,9 @@
             this.ClientSize = new System.Drawing.Size(289, 206);
             this.Controls.Add(this.msgDiv);
             this.Controls.Add(this.txtUserPassword);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbPwd);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbUserName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -138,9 +139,9 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbPwd;
         private System.Windows.Forms.TextBox txtUserPassword;
         private MsgDiv msgDiv;
     }

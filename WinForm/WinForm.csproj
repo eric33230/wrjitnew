@@ -131,6 +131,7 @@
   <ItemGroup>
     <Compile Include="AboutMenu.cs" />
     <Compile Include="BarCodeClass.cs" />
+    <Compile Include="GlobalData.cs" />
     <Compile Include="DGFillArea.cs" />
     <Compile Include="frmAddUser.cs">
       <SubType>Form</SubType>
@@ -332,6 +333,7 @@
     <Compile Include="FrmInnerBox.Designer.cs">
       <DependentUpon>FrmInnerBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Languages\Language.cs" />
     <Compile Include="MsgDiv.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -474,6 +476,7 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -526,6 +529,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barcode.ico" />
+    <Content Include="Languages\Chinese.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\English.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

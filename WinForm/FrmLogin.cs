@@ -17,9 +17,22 @@ namespace WinForm
         public FrmLogin()
         {
             InitializeComponent();
+            SetLanguage();
+
+
         }
-        //创建一个全局公共的person业务层管理类
-        BLL.PersonManager pm = new BLL.PersonManager();
+
+        private void SetLanguage()
+         {
+            this.lbUserName.Text = GlobalData.GlobalLanguage.Login_UserName;
+            this.lbPwd.Text = GlobalData.GlobalLanguage.Login_UserPwd;
+       //      this.btnLogin.Text = GlobalData.GlobalLanguage.Login_Login;
+         }
+
+
+
+    //创建一个全局公共的person业务层管理类
+    BLL.PersonManager pm = new BLL.PersonManager();
         string PLoginName = "";
         string PLoginPWD = "";
         string hname = Dns.GetHostName(); //得到本机的主机名  
@@ -94,6 +107,11 @@ namespace WinForm
                 txtUserName.Text = "xiaoming   ";
                 txtUserPassword.Text = "1";
             }
+
+        }
+
+        private void txtUserPassword_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
