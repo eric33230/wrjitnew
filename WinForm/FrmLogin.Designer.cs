@@ -62,7 +62,7 @@
             // lbUserName
             // 
             this.lbUserName.AutoSize = true;
-            this.lbUserName.Location = new System.Drawing.Point(31, 38);
+            this.lbUserName.Location = new System.Drawing.Point(22, 38);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(41, 12);
             this.lbUserName.TabIndex = 1;
@@ -78,7 +78,7 @@
             // lbPwd
             // 
             this.lbPwd.AutoSize = true;
-            this.lbPwd.Location = new System.Drawing.Point(44, 86);
+            this.lbPwd.Location = new System.Drawing.Point(22, 86);
             this.lbPwd.Name = "lbPwd";
             this.lbPwd.Size = new System.Drawing.Size(29, 12);
             this.lbPwd.TabIndex = 1;
